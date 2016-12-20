@@ -17,6 +17,9 @@ class CreateAlbumsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
+            $table->integer('band_id')->unsigned();
+            $table->foreign('band_id')->references('id')->on('bands');
+
             $table->string('name');
             $table->date('recorded_date')->nullable();
             $table->date('release_date')->nullable();
