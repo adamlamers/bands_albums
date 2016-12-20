@@ -18,12 +18,12 @@ class CreateAlbumsTable extends Migration
             $table->timestamps();
 
             $table->string('name');
-            $table->date('recorded_date');
-            $table->date('release_date');
-            $table->integer('number_of_tracks');
-            $table->string('label');
-            $table->string('producer');
-            $table->string('genre');
+            $table->date('recorded_date')->nullable();
+            $table->date('release_date')->nullable();
+            $table->integer('number_of_tracks')->nullable();
+            $table->string('label')->nullable();
+            $table->string('producer')->nullable();
+            $table->string('genre')->nullable();
         });
     }
 
