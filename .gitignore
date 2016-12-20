@@ -1,0 +1,15 @@
+/node_modules
+/public/storage
+/storage/*.key
+/storage
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+.vagrant
+/node_modules
+.DS_Store
+composer.phar
+/build/logs
+/build/coverage
