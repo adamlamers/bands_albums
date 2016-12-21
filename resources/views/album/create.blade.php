@@ -57,22 +57,22 @@
 
             <label class="label"># of Tracks</label>
             <p class="control">
-                <input class="input" type="text" placeholder="16" name="number_of_tracks" value="{{ $album->number_of_tracks or '' }}">
+                <input class="input" type="text" placeholder="16" name="number_of_tracks" value="{{ $album->number_of_tracks or old('number_of_tracks') }}">
             </p>
 
             <label class="label">Label</label>
             <p class="control">
-                <input class="input" type="text" placeholder="Death Row Records" name="label" value="{{ $album->label or ''}}">
+                <input class="input" type="text" placeholder="Death Row Records" name="label" value="{{ $album->label or old('label') }}">
             </p>
 
             <label class="label">Producer</label>
             <p class="control">
-                <input class="input" type="text" placeholder="Snoop Dogg" name="producer" value="{{ $album->producer  or ''}}">
+                <input class="input" type="text" placeholder="Snoop Dogg" name="producer" value="{{ $album->producer  or old('producer') }}">
             </p>
 
             <label class="label">Genre</label>
             <p class="control">
-                <input class="input" type="text" placeholder="R&B" name="genre" value="{{ $album->genre or '' }}">
+                <input class="input" type="text" placeholder="R&B" name="genre" value="{{ $album->genre or old('genre') }}">
             </p>
 
             <p class="control">
