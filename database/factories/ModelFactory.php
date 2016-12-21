@@ -22,3 +22,28 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Album::class, function (Faker\Generator $faker) {
+    return [
+        'band_id' => function() {
+            return App\Band::all()->random()->id;
+        },
+        'name' => $faker->name,
+        'recorded_date' => $faker->date,
+        'release_date' => $faker->date,
+        'number_of_tracks' => $faker->randomNumber(2),
+        'label' => $faker->name,
+        'producer' => $faker->name,
+        'genre' => $faker->name,
+    ];
+});
+
+$factory->define(App\Band::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'start_date' => $faker->date,
+        'website' => $faker->url,
+        'still_active' => $faker->boolean(),
+    ];
+});
+
