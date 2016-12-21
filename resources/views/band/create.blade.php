@@ -43,7 +43,7 @@
 
             <p class="control">
                 <label class="checkbox">
-                    <input type="checkbox" name="still_active" {{ ($band->still_active or (old('still_active') == 'on')) ? 'checked' : '' }}>
+                    <input type="checkbox" name="still_active" {{ ( (isset($band) && $band->still_active) or (old('still_active') == 'on')) ? 'checked' : '' }}>
                     Still Active
                 </label>
             </p>
