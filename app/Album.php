@@ -11,6 +11,7 @@ class Album extends Model
                                 'recorded_date',
                                 'release_date',
                                 'number_of_tracks',
+                                'band_id',
                                 'label',
                                 'producer',
                                 'genre');
