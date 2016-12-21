@@ -28,8 +28,7 @@
 
             <label class="label">Album Name</label>
             <p class="control">
-            <input class="input" type="text" placeholder="Album Name" name="name" value="{{
-            $album->name or '' }}">
+            <input class="input" type="text" placeholder="Album Name" name="name" value="{{ $album->name or old('name') }}">
             </p>
 
             <label class="label">Band</label>
@@ -48,7 +47,12 @@
 
             <label class="label">Recorded</label>
             <p class="control">
-                <input class="input" type="text" placeholder="1994-12-12" name="record_date" value="{{ $album->recorded_date or ''}}">
+                <input class="input" type="text" placeholder="1994-12-12" name="recorded_date" value="{{ $album->recorded_date or old('recorded_date')}}">
+            </p>
+
+            <label class="label">Released</label>
+            <p class="control">
+                <input class="input" type="text" placeholder="1994-12-12" name="release_date" value="{{ $album->release_date or old('release_date')}}">
             </p>
 
             <label class="label"># of Tracks</label>

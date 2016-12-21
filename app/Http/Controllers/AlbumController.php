@@ -6,6 +6,7 @@ use App\User;
 use App\Album;
 use App\Band;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreAlbum;
 
 use Illuminate\Http\Request;
 
@@ -53,7 +54,7 @@ class AlbumController extends Controller
      * Save an Album
      * @return Redirect
      */
-    public function save(Request $request)
+    public function save(StoreAlbum $request)
     {
         if($request->has('edit_id'))
             $album = Album::findOrFail($request->input('edit_id'));
