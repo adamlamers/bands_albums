@@ -15,7 +15,7 @@ Route::get('/', 'BandController@doList');
 Route::post('/band/save', 'BandController@save');
 Route::get('/band/create', 'BandController@create');
 Route::get('/band/{id}/delete', 'BandController@delete');
-Route::get('/album/{id}/edit', 'BandController@edit');
+Route::get('/band/{id}/edit', 'BandController@edit');
 
 Route::get('/albums', 'AlbumController@doList');
 Route::post('/album/save', 'AlbumController@save');
