@@ -25,3 +25,11 @@ php artisan db:seed
 
 Then navigate to http://adamlamers.dev or http://192.168.33.10
 
+OR
+
+Configure the .env, generate the keys, migrate and seed the database then run:
+
+```
+php artisan serve
+```
+
